@@ -135,7 +135,7 @@ function createErrDiff(actual, expected, operator) {
       // If the stderr is a tty and the input length is lower than the current
       // columns per line, add a mismatch indicator below the output. If it is
       // not a tty, use a default value of 80 characters.
-      const maxLength = process.stderr && process.stderr.isTTY ? process.stderr.columns : 80;
+      const maxLength = typeof process!=="undefined" && process.stderr && process.stderr.isTTY ? process.stderr.columns : 80;
       if (inputLength < maxLength) {
         while (actualLines[0][i] === expectedLines[0][i]) {
           i++;
@@ -338,7 +338,7 @@ class AssertionError extends Error {
     if (message != null) {
       super(String(message));
     } else {
-      if (process.stderr && process.stderr.isTTY) {
+      if (typeof process!=="undefined" && process.stderr && process.stderr.isTTY) {
         // Reset on each call to make sure we handle dynamically set environment
         // variables correct.
         if (
