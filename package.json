@@ -1,16 +1,18 @@
 {
   "name": "@hoge1e3/assert",
-  "version": "2.1.0",
+  "version": "2.1.2",
   "description": "The assert module from Node.js, for the browser.(solving undefined process issue)",
   "main": "build/assert.js",
   "files": [
     "build/assert.js",
-    "build/internal"
+    "build/internal",
+    "assert.d.ts"
   ],
+  "types": "assert.d.ts",
   "license": "MIT",
-  "homepage": "https://github.com/browserify/commonjs-assert",
-  "repository": "browserify/commonjs-assert",
+  "repository": "https://github.com/hoge1e3/commonjs-assert",
   "scripts": {
+    "link": "npm link @hoge1e3/util",
     "build-browser": "webpack --mode=development",
     "test-browser": "npx http-server -o test-browser/index.html",
     "build": "babel assert.js test.js --out-dir build && babel internal --out-dir build/internal && babel test --out-dir build/test",

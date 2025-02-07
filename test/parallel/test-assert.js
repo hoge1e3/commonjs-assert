@@ -36,7 +36,7 @@ const arrayFill = require('array-fill');
 
 const common = require('../common');
 const assert = require('../../assert');
-const { inspect } = require('util/');
+const { inspect } = require('@hoge1e3/util');
 // [browserify]
 // const { internalBinding } = require('internal/test/binding');
 const a = assert;

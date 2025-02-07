@@ -31,8 +31,8 @@ const { codes: {
   ERR_MISSING_ARGS
 } } = require('./internal/errors');
 const AssertionError = require('./internal/assert/assertion_error');
-const { inspect } = require('util/');
-const { isPromise, isRegExp } = require('util/').types;
+const { inspect } = require('@hoge1e3/util');
+const { isPromise, isRegExp } = require('@hoge1e3/util').types;
 
 const objectAssign = require('object.assign/polyfill')();
 const objectIs = require('object-is/polyfill')();
@@ -76,7 +76,7 @@ let warned = false;
 // assert module must conform to the following interface.
 
 const assert = module.exports = ok;
-
+module.exports.default=module.exports;
 const NO_EXCEPTION_SENTINEL = {};
 
 // All of the following functions must throw an AssertionError

@@ -111,7 +111,7 @@ createErrorType('ERR_INVALID_ARG_TYPE',
     return msg;
   }, TypeError);
 createErrorType('ERR_INVALID_ARG_VALUE', (name, value, reason = 'is invalid') => {
-  if (util === undefined) util = require('util/');
+  if (util === undefined) util = require('@hoge1e3/util');
   let inspected = util.inspect(value);
   if (inspected.length > 128) {
     inspected = `${inspected.slice(0, 128)}...`;

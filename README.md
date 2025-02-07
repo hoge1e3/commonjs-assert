@@ -1,6 +1,6 @@
 # assert
 
-> The [`assert`](https://nodejs.org/api/assert.html) module from Node.js, for the browser.
+> The [`assert`](https://nodejs.org/api/assert.html) module from Node.js, for the browser. (Solving undefined process problem on browser)
 
 [![Build Status](https://travis-ci.org/browserify/commonjs-assert.svg?branch=master)](https://travis-ci.org/browserify/commonjs-assert)
 [![npm](https://img.shields.io/npm/dm/assert.svg)](https://www.npmjs.com/package/assert)

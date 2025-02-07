@@ -47,7 +47,7 @@ const {
   isSymbolObject,
   isFloat32Array,
   isFloat64Array
-} = require('util/').types;
+} = require('@hoge1e3/util').types;
 
 function isNonIndex(key) {
   if (key.length === 0 || key.length > 10)
